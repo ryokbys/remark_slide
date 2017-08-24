@@ -13,6 +13,8 @@ class: middle
 
 Department of Physical Science and Engineering, Nagoya Institute of Technology
 
+[Github page for this slide](https://github.com/ryokbys/remark_slide)
+
 ---
 
 # Items and ordered items

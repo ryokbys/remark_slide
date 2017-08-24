@@ -8,6 +8,10 @@ To avoid using online scripts such as `remark-latest.min.js` and `MathJax.js`,
 
 - `remark-latest.min.js` were downloaded from somewhere (official website?) and should be contained in this directory.
 - The link to the directory that contains `MathJax` shoul be created in this directory. If you installed `mathjax` using `npm`, the `mathjax` directory would be at `~/.nodebrew/node/vX.X.X/lib/node_modules/`.
+  ```
+  $ ln -s ~/.nodebrew/node/vX.X.X/lib/node_modules/mathjax .
+  ```
+
 
 ### Make it online
 
