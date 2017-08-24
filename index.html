@@ -66,104 +66,22 @@ code {
 	padding: 0.5em;
 }
 
+      /* Splitting */
+      .column:first-of-type {float:left}
+      .column:last-of-type {float:right}
+      .split-40 .column:first-of-type {width: 40%}
+      .split-40 .column:last-of-type {width: 60%}
+      .split-50 .column:first-of-type {width: 50%}
+      .split-50 .column:last-of-type {width: 50%}
+      .split-60 .column:first-of-type {width: 60%}
+      .split-60 .column:last-of-type {width: 40%}
+      
 		</style>
 	</head>
 	<body>
-    <textarea id="source">
-
-# .center[Slide using **remark.js**]
-
-
-<br>
-<br>
-<br>
-
-### Ryo KOBAYASHI\\(^{1,2}\\)
-
-\\({}^1\\)Department of Physical Science and Engineering, Nagoya Institute of Technology
-
-\\({}^2\\)Center for Materials research by Information Integration (CMI2), Research and Services Division of Materials Data and Integrated Systems (MaDIS), NIMS
-
----
-
-# Items and ordered items
-
-```
-- list1
-- list2
-- list3
-
-1. numbered list
-2. second item
-```
-
-- list1
-- list2
-- list3
-
-1. ordered items
-2. second
-
----
-
-# Math formula
-
-Math formula is available using *MathJax.js*.
-
-```
-$$
-E = mc^2
-$$
-where \\(E, m, c\\) are energy, mass and speed of light.
-```
-
-$$
-E = mc^2
-$$
-where \\(E, m, c\\) are energy, mass and speed of light.
-
----
-
-# Images
-
-```
-.center[![:scale 30%](./yoda.png)]
-```
-.center[![:scale 30%](./yoda.png)]
-
-This scaling works with the following code just before `var slideshow = remark.create();`.
-```
-remark.macros.scale = function (percentage) {
-  var url = this;
-  return '<img src="' + url + '" style="width: ' + percentage + '" />';
-};
-```
-
----
-
-# Images *contd.*
-
-```
-![:scale 25%](./yoda.png) Text alongside the non-aligned image.
-```
-![:scale 25%](./yoda.png) Text alongside the non-aligned image.
-
-<br>
-```
-.right[Text alongside the right aligned image. ![:scale 25%](./yoda.png)]
-```
-.right[Text alongside the right aligned image. ![:scale 25%](./yoda.png)]
-
----
-
-## References
-
-- [Introduction of the remark.js](https://remarkjs.com/)
-      
-    </textarea>
     <!-- Offline --> 
     <script src="remark-latest.min.js"></script>
-    <script src="file:///Users/kobayashi/.nodebrew/node/v8.4.0/lib/node_modules/mathjax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="mathjax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <!-- Online -->
     <!-- <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script> -->
@@ -172,9 +90,9 @@ remark.macros.scale = function (percentage) {
         var url = this;
         return '<img src="' + url + '" style="width: ' + percentage + '" />';
       };
-      // var q = window.location.search.substring(1);
-			// var slideshow = remark.create({sourceUrl: q ? q : "contents.md"});
-      var slideshow = remark.create();
+      var q = window.location.search.substring(1);
+			var slideshow = remark.create({sourceUrl: q ? q : "content.md"});
+      //var slideshow = remark.create();
     </script>
     <script type="text/javascript">
       // Setup MathJax
