@@ -1,5 +1,7 @@
 # Slide template using Remark.js
 
+[Here](http://ryokbys.web.nitech.ac.jp/contents/slides/remark_slide/index.html) you can see the slide template.
+
 ## Offline first
 
 To avoid using online scripts such as `remark-latest.min.js` and `MathJax.js`,
@@ -7,7 +9,7 @@ To avoid using online scripts such as `remark-latest.min.js` and `MathJax.js`,
 - `remark-latest.min.js` were downloaded from somewhere (official website?) and should be contained in this directory.
 - `MathJax.js` is loaded from `~/.nodebrew/node/v8.4.0/lib/node_modules/mathjax/` which was installed using `npm`. **The path should be modified to match your system.**
 
-### Making it online
+### Make it online
 
 Replace the following lines
 ```
@@ -38,7 +40,7 @@ If you want to write the contents separately from `index.html`, you can do it by
   var slideshow = remark.create({sourceUrl: q ? q : "contents.md"});
 </script>
 ```
-But in this case, the slide should be opened via a HTTP server, which is achieved by
+But in this case, the slide should be opened via a HTTP server, which is achieved by (python2 case)
 ```
 $ python -m SimpleHTTPServer
 ```

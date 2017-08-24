@@ -1,1 +1,195 @@
-<!DOCTYPE html><html>	<head>		<meta charset="utf-8" />		<title>TITLE</title>		<style>			body {	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}h1, h2, h3 {	font-weight: 400;	margin-bottom: 0;}.remark-slide-content h1 { font-size: 3em; }.remark-slide-content h2 { font-size: 2em; }.remark-slide-content h3 { font-size: 1.6em; }.footnote {	position: absolute;	bottom: 3em;}li p { line-height: 1.25em; }.red { color: #fa0000; }.large { font-size: 2em; }a, a > code {	color: rgb(249, 38, 114);	text-decoration: none;}code {	background: none repeat scroll 0 0 #F8F8FF;  border: 1px solid #DEDEDE;  border-radius: 3px 	;  padding: 0 0.2em;}.remark-code, .remark-inline-code { font-family: "Bitstream Vera Sans Mono", "Courier", monospace; }.remark-code-line-highlighted     { background-color: #373832; }.pull-left {	float: left;	width: 47%;}.pull-right {	float: right;	width: 47%;}.pull-right ~ p {	clear: both;}#slideshow .slide .content code {	font-size: 0.8em;}#slideshow .slide .content pre code {	font-size: 0.9em;	padding: 15px;}.main-title, .title {	background: #272822;	color: #777872;	text-shadow: 0 0 20px #333;}.title h1, .title h2, .main-title h1, .main-title h2 {	color: #f3f3f3;	line-height: 0.8em;}/* Custom */.remark-code {	display: block;	padding: 0.5em;}		</style>	</head>	<body>    <textarea id="source"># .center[Slide using **remark.js**]<br><br><br>### Ryo KOBAYASHI\\(^{1,2}\\)\\({}^1\\)Department of Physical Science and Engineering, Nagoya Institute of Technology\\({}^2\\)Center for Materials research by Information Integration (CMI2), Research and Services Division of Materials Data and Integrated Systems (MaDIS), NIMS---# Items and numerates<br><br>- list1- list2- list31. numbered list2. second item---# Math formula```$$E = mc^2$$where \\(E, m, c\\) are energy, mass and speed of light.```$$E = mc^2$$where \\(E, m, c\\) are energy, mass and speed of light.---# Images```.center[![:scale 30%](./yoda.png)]```.center[![:scale 30%](./yoda.png)]This scaling works with the following code just before `var slideshow = remark.create();`.```remark.macros.scale = function (percentage) {  var url = this;  return '<img src="' + url + '" style="width: ' + percentage + '" />';};```          </textarea>    <!-- Offline -->     <script src="remark-latest.min.js"></script>    <script src="file:///Users/kobayashi/.nodebrew/node/v8.4.0/lib/node_modules/mathjax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>    <!-- Online -->    <!-- <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script> -->    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script> -->    <script>      remark.macros.scale = function (percentage) {        var url = this;        return '<img src="' + url + '" style="width: ' + percentage + '" />';      };      // var q = window.location.search.substring(1);			// var slideshow = remark.create({sourceUrl: q ? q : "contents.md"});      var slideshow = remark.create();    </script>    <script type="text/javascript">      // Setup MathJax      MathJax.Hub.Config({        tex2jax: {          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']        }      });      MathJax.Hub.Queue(function() {        $(MathJax.Hub.getAllJax()).map(function(index, elem) {          return(elem.SourceElement());        }).parent().addClass('has-jax');      });      MathJax.Hub.Configured();    </script>		<script></script>	</body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>TITLE</title>
+		<style>
+			body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3 {
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.remark-slide-content h1 { font-size: 3em; }
+.remark-slide-content h2 { font-size: 2em; }
+.remark-slide-content h3 { font-size: 1.6em; }
+.footnote {
+	position: absolute;
+	bottom: 3em;
+}
+li p { line-height: 1.25em; }
+.red { color: #fa0000; }
+.large { font-size: 2em; }
+a, a > code {
+	color: rgb(249, 38, 114);
+	text-decoration: none;
+}
+code {
+	background: none repeat scroll 0 0 #F8F8FF;
+  border: 1px solid #DEDEDE;
+  border-radius: 3px 	;
+  padding: 0 0.2em;
+}
+.remark-code, .remark-inline-code { font-family: "Bitstream Vera Sans Mono", "Courier", monospace; }
+.remark-code-line-highlighted     { background-color: #373832; }
+.pull-left {
+	float: left;
+	width: 47%;
+}
+.pull-right {
+	float: right;
+	width: 47%;
+}
+.pull-right ~ p {
+	clear: both;
+}
+#slideshow .slide .content code {
+	font-size: 0.8em;
+}
+#slideshow .slide .content pre code {
+	font-size: 0.9em;
+	padding: 15px;
+}
+.main-title, .title {
+	background: #272822;
+	color: #777872;
+	text-shadow: 0 0 20px #333;
+}
+.title h1, .title h2, .main-title h1, .main-title h2 {
+	color: #f3f3f3;
+	line-height: 0.8em;
+}
+/* Custom */
+.remark-code {
+	display: block;
+	padding: 0.5em;
+}
+
+		</style>
+	</head>
+	<body>
+    <textarea id="source">
+
+# .center[Slide using **remark.js**]
+
+
+<br>
+<br>
+<br>
+
+### Ryo KOBAYASHI\\(^{1,2}\\)
+
+\\({}^1\\)Department of Physical Science and Engineering, Nagoya Institute of Technology
+
+\\({}^2\\)Center for Materials research by Information Integration (CMI2), Research and Services Division of Materials Data and Integrated Systems (MaDIS), NIMS
+
+---
+
+# Items and ordered items
+
+```
+- list1
+- list2
+- list3
+
+1. numbered list
+2. second item
+```
+
+- list1
+- list2
+- list3
+
+1. ordered items
+2. second
+
+---
+
+# Math formula
+
+Math formula is available using *MathJax.js*.
+
+```
+$$
+E = mc^2
+$$
+where \\(E, m, c\\) are energy, mass and speed of light.
+```
+
+$$
+E = mc^2
+$$
+where \\(E, m, c\\) are energy, mass and speed of light.
+
+---
+
+# Images
+
+```
+.center[![:scale 30%](./yoda.png)]
+```
+.center[![:scale 30%](./yoda.png)]
+
+This scaling works with the following code just before `var slideshow = remark.create();`.
+```
+remark.macros.scale = function (percentage) {
+  var url = this;
+  return '<img src="' + url + '" style="width: ' + percentage + '" />';
+};
+```
+
+---
+
+# Images *contd.*
+
+```
+![:scale 25%](./yoda.png) Text alongside the non-aligned image.
+```
+![:scale 25%](./yoda.png) Text alongside the non-aligned image.
+
+<br>
+```
+.right[Text alongside the right aligned image. ![:scale 25%](./yoda.png)]
+```
+.right[Text alongside the right aligned image. ![:scale 25%](./yoda.png)]
+
+---
+
+## References
+
+- [Introduction of the remark.js](https://remarkjs.com/)
+      
+    </textarea>
+    <!-- Offline --> 
+    <script src="remark-latest.min.js"></script>
+    <script src="file:///Users/kobayashi/.nodebrew/node/v8.4.0/lib/node_modules/mathjax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <!-- Online -->
+    <!-- <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script> -->
+    <script>
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
+      // var q = window.location.search.substring(1);
+			// var slideshow = remark.create({sourceUrl: q ? q : "contents.md"});
+      var slideshow = remark.create();
+    </script>
+    <script type="text/javascript">
+      // Setup MathJax
+      MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      });
+      MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+          return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+      });
+      MathJax.Hub.Configured();
+    </script>
+		<script></script>
+	</body>
+</html>
