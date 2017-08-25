@@ -32,7 +32,7 @@ Then this slide will load `remark-latest.min.js` and `MathJax.js` online.
 
 Since the main content is separated from `index.html` and loaded from it, the HTML file should be loaded via HTTP server. You can launch a simple HTTP server with Python2 as
 ```
-$ python -m SimpleHTTPServer
+$ python -m SimpleHTTPServer 8000
 ```
 and the file can be loaded at `localhost:8000` with a browser.
 

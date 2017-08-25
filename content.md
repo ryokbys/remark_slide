@@ -87,6 +87,22 @@ remark.macros.scale = function (percentage) {
 
 ---
 
+# Movie
+
+.center[
+<iframe width="700" height="350" src="https://www.youtube.com/embed/BQ4yd2W50No" frameborder="0" allowfullscreen></iframe>
+]
+
+Right click on the movie at *youtube.com* and copy its URL and paste it as,
+```
+.center[
+<iframe width="700" height="400" src="https://www.youtube.com/embed/BQ4yd2W50No"
+frameborder="0" allowfullscreen></iframe>
+]
+```
+
+---
+
 # Two-column slide
 
 ```
@@ -140,7 +156,6 @@ right
 ]
 ```
 ]
-
 
 ---
 
