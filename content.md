@@ -43,13 +43,20 @@ Math formula is available using *MathJax.js*.
 $$
 E = mc^2
 $$
-where \\(E, m, c\\) are energy, mass and speed of light.
+where $E, m, c$ are energy, mass and speed of light.
 ```
 
 $$
 E = mc^2
 $$
-where \\(E, m, c\\) are energy, mass and speed of light.
+where $E, m, c$ are energy, mass and speed of light.
+
+In case of inline math, default identifier would be like `\\(x\\)`, but you can change them to `$` by putting the following lines in `index.html`
+```
+        tex2jax: {
+          inlineMath: [["\x24","\x24"]]
+        },
+```
 
 ---
 
