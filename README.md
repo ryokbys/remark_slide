@@ -27,14 +27,22 @@ with
 ```
 Then this slide will load `remark-latest.min.js` and `MathJax.js` online.
 
-
 ## Open with a browser
 
-Since the main content is separated from `index.html` and loaded from it, the HTML file should be loaded via HTTP server. You can launch a simple HTTP server with Python2 as
+### Auto-refreshing with Safari on macOS
+Using `auto-refresh.py`, you can make your browser reload automatically when you save the `content.md` file.
+
+```
+$ python auto-refresh.py
+```
+
+### Launch HTTP server manually
+
+If you are not using macOS, `auto-refresh.py` can not be used.
+
+You can launch a simple HTTP server with Python2 as
 ```
 $ python -m SimpleHTTPServer 8000
 ```
 and the file can be loaded at `localhost:8000` with a browser.
-
-
 
