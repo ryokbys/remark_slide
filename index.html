@@ -4,16 +4,26 @@
 		<meta charset="utf-8" />
 		<title>TITLE</title>
 		<style>
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @font-face{
+        font-family: 'Droid Serif';
+        src: url('fonts/DroidSerif-Regular.ttf');
+      }
+      @font-face{
+        font-family: 'Yanone Kaffeesatz';
+        src: url('fonts/YanoneKaffeesatz-Regular.ttf');
+      }
+      @font-face{
+        font-family: 'Ubuntu Mono';
+        src: url('fonts/UbuntuMono-Regular.ttf');
+      }
 			body {
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1, h2, h3 {
         font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	font-weight: 400;
-	margin-bottom: 0;
+	    margin-bottom: 0;
+      margin-top: 0.2em;
 }
 .remark-slide-content h1 { font-size: 3em; }
 .remark-slide-content h2 { font-size: 2em; }
@@ -30,10 +40,11 @@ a, a > code {
 	text-decoration: none;
 }
 code {
-	background: none repeat scroll 0 0 #F8F8FF;
-  border: 1px solid #DEDEDE;
-  border-radius: 3px 	;
-  padding: 0 0.2em;
+	    background: none repeat scroll 0 0 #F8F8FF;
+      border: 1px solid #DEDEDE;
+      border-radius: 3px;
+      padding: 0 0.2em;
+      word-wrap: break-word;      
 }
 .remark-code, .remark-inline-code { font-family: "Bitstream Vera Sans Mono", "Courier", monospace; }
 .remark-code-line-highlighted     { background-color: #373832; }
@@ -108,6 +119,7 @@ code {
         "HTML-CSS": {
           availableFonts: [],
           webFont: "Neo-Euler",
+          scale: 90
         }
       });
       MathJax.Hub.Queue(function() {

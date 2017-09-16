@@ -24,6 +24,7 @@ class: middle
 
 1. numbered list
 2. second item
+3. third one
 ```
 
 - list1
@@ -32,6 +33,7 @@ class: middle
 
 1. ordered items
 2. second
+3. third one
 
 ---
 
@@ -101,7 +103,7 @@ remark.macros.scale = function (percentage) {
 Right click on the movie at *youtube.com* and copy its URL and paste it as,
 ```
 .center[
-<iframe width="700" height="400" src="https://www.youtube.com/embed/BQ4yd2W50No"
+<iframe width="700" height="400" src="https://www.youtube.com/..."
 frameborder="0" allowfullscreen></iframe>
 ]
 ```
@@ -142,7 +144,7 @@ class: split-50
 The example below can achieve two-column slide like this.
 
 
-But the *code block* on the rigth column seems not working with this trick.
+But the *code block* on the rigth column seems not working with this trick (see below).
 ]
 
 .column[
@@ -164,7 +166,68 @@ right
 
 ---
 
+# Fonts for local use
+
+Download font files (`*.ttf`) from the internet like [Google fonts](https://fonts.google.com/) and put them into `fonts/` directory.
+```
+$ ls fonts
+DroidSerif-Regular.ttf		YanoneKaffeesatz-Regular.ttf
+UbuntuMono-Regular.ttf
+```
+Then put the following lines in the CSS
+```
+      @font-face{
+        font-family: 'Droid Serif';
+        src: url('fonts/DroidSerif-Regular.ttf');
+      }
+      @font-face{
+        font-family: 'Yanone Kaffeesatz';
+        src: url('fonts/YanoneKaffeesatz-Regular.ttf');
+      }
+      @font-face{
+        font-family: 'Ubuntu Mono';
+        src: url('fonts/UbuntuMono-Regular.ttf');
+      }
+```
+
+---
+
+# MathJax for local use
+
+Make a link `mathjax` that points to the directory where the `mathjax` is installed.
+And put the following code in the `index.html` file.
+```
+<script src="mathjax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+```
+
+---
+
+# Auto-refresh of the slide
+
+Using the script `auto-refresh.py` included in this directory, you can check the slide at the same time you save the `content.md`.
+
+`auto-refresh.py` requires `watch.rb` script by [@calo](https://github.com/carlo/haml-sass-file-watcher).
+
+```bash
+$ cp watch.rb ~/bin
+$ cd /path/to/remark_slide/
+$ python auto-refresh.py
+```
+You should run `auto-refresh.py` at the same directory where `index.html` and `content.md` exist.
+
+---
+
+# Auto-refresh test
+
+`auto-refresh.py` lets **Safari** reload the slide URL when it detects update in the `content.md`.
+
+.center[![:scale 80%](yoda.png)]
+
+
+---
+
 # References
 
 - [Introduction of the remark.js](https://remarkjs.com/)
       
+- [watch.rb script used in autoload.sh](https://github.com/carlo/haml-sass-file-watcher)
