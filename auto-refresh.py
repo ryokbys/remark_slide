@@ -8,15 +8,17 @@
 
 import commands
 import os
-import SimpleHTTPServer
-import SocketServer
-import multiprocessing
+from subprocess import Popen,PIPE
+import shlex
 
 portnum = 8000
 title = commands.getoutput("grep -o '<title>.*</title>' index.html | sed 's/<title>//' | sed 's|</title>||'")
 print "title = ",title
 cwd = os.getcwd()
 print "cwd = ", cwd
+browser = 'Safari'
+#browser = 'Google Chrome'
+print "browser = ", browser
 
 while(True):
     outlsof = int(commands.getoutput("lsof -i:{0:d} -P | wc -l".format(portnum)))
@@ -25,24 +27,17 @@ while(True):
     else:
         break
 
-# os.system('python -m SimpleHTTPServer {0:d} &'.format(portnum))
-Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-
-httpd = SocketServer.TCPServer(("", portnum), Handler)
+cmd = 'http-server -p {0:d}'.format(portnum)
+process = Popen(shlex.split(cmd),stdout=PIPE,stderr=PIPE)
 print "serving at port: ", portnum
-# httpd.serve_forever()
-#...start the server as a separate process
-server_process = multiprocessing.Process(target=httpd.serve_forever)
-server_process.daemon = True
-server_process.start()
 
-url = "localhost:{0:d}".format(portnum)
+url = "http://localhost:{0:d}".format(portnum)
 
-osascript="osascript -e 'tell application \"Safari\" to open location \"{0:s}\"'".format(url)
+osascript="osascript -e 'tell application \"{0:s}\" to open location \"{1:s}\"'".format(browser,url)
 print osascript
 os.system(osascript)
 
-watchrb="~/bin/watch.rb {0:s} \"{1:s}\"".format(cwd,url)
+watchrb="~/bin/watch.rb {0:s} \"{1:s}\" {2:s}".format(cwd,url,browser)
 print watchrb
 os.system(watchrb)
 

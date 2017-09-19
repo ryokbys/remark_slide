@@ -40,9 +40,10 @@ $ python auto-refresh.py
 
 If you are not using macOS, `auto-refresh.py` can not be used.
 
-You can launch a simple HTTP server with Python2 as
+You can launch a simple HTTP server as
 ```
-$ python -m SimpleHTTPServer 8000
+$ npm install -g http-server
+$ http-server -p 8000
 ```
 and the file can be loaded at `localhost:8000` with a browser.
 

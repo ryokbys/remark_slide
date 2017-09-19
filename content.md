@@ -94,10 +94,10 @@ remark.macros.scale = function (percentage) {
 
 ---
 
-# Movie
+# Video from youtube
 
 .center[
-<iframe width="700" height="350" src="https://www.youtube.com/embed/BQ4yd2W50No" frameborder="0" allowfullscreen></iframe>
+<iframe width="500" height="300" src="https://www.youtube.com/embed/BQ4yd2W50No" frameborder="0" allowfullscreen></iframe>
 ]
 
 Right click on the movie at *youtube.com* and copy its URL and paste it as,
@@ -107,6 +107,24 @@ Right click on the movie at *youtube.com* and copy its URL and paste it as,
 frameborder="0" allowfullscreen></iframe>
 ]
 ```
+
+---
+
+# Local video
+
+To load a local video file, `iframe` could work but `video` tag would be appropriate,
+because you can control `autoplay` or something.
+```
+<video width="700" height="400" controls>
+    <source src="auto-refresh_remark-slide.m4v" type="video/mp4">
+</video>
+```
+
+.center[
+<video width="500" height="300" controls>
+    <source src="auto-refresh_remark-slide.m4v" type="video/mp4">
+</video>
+]
 
 ---
 
@@ -217,12 +235,18 @@ You should run `auto-refresh.py` at the same directory where `index.html` and `c
 
 ---
 
+name: refresh
+
 # Auto-refresh test
 
-`auto-refresh.py` lets **Safari** reload the slide URL when it detects update in the `content.md`.
+`auto-refresh.py` lets **Safari** reload the slide URL when it detects update in the current working directory.
 
-.center[![:scale 80%](yoda.png)]
-
+.center[
+<!-- <iframe frameborder="0" width="700" height="350" src="./auto-refresh_remark-slide.m4v"></iframe> -->
+<video width="700" height="400" controls>
+    <source src="auto-refresh_remark-slide.m4v" type="video/mp4">
+</video>
+]
 
 ---
 
