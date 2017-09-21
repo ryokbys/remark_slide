@@ -1,3 +1,6 @@
+# I GAVE UP USING REMARK.JS..., BECAUSE IT LACKS SOME IMPORTANT FUNCTIONALITIES (A FEW BUT IMPORTNAT!).
+
+
 # Slide template using Remark.js
 
 [Here](http://ryokbys.web.nitech.ac.jp/contents/slides/remark_slide/index.html) you can see the slide template.
@@ -48,4 +51,3 @@ $ http-server -p 8000
 and the file can be loaded at `localhost:8000` with a browser.
 
 
-## BUT I GAVE UP USING REMARK.JS..., BECAUSE IT LACKS SOME IMPORTANT FUNCTIONALITIES (A FEW BUT IMPORTNAT!).
