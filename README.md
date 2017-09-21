@@ -47,3 +47,5 @@ $ http-server -p 8000
 ```
 and the file can be loaded at `localhost:8000` with a browser.
 
+
+## BUT I GAVE UP USING REMARK.JS..., BECAUSE IT LACKS SOME IMPORTANT FUNCTIONALITIES (A FEW BUT IMPORTNAT!).
